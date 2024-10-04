@@ -1,9 +1,9 @@
 Nome: Pedro Sanzio e Joao Pedro
-Convertido de: TESTE-01.txt
+Convertido de: TESTE-04.txt
 Resultado: 
 
-5
+6
 2
-8
-8
-32
+20
+3
+12
