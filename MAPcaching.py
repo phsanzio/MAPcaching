@@ -3,8 +3,8 @@ import math
 def hit_or_miss(array_list):
     tamanho_ram = int(array_list[0][0])
     n_palavras = int(array_list[1][0])
-    tamanho_bloco = int(array_list[1][0]) * 4
-    n_linhas = int(array_list[2][0])
+    tamanho_bloco = n_palavras * 4
+    n_linhas = int(array_list[2][0]) 
     n_vias = int(array_list[3][0])
     list_end = array_list[4]
     list_cache = []
@@ -35,9 +35,10 @@ def text_generator(read_file, write_file):
         for line in read_file:
             array_temp = []
             line = line.strip().replace(',', '').replace('(',' ').replace(')',' ')
-            for element in line.split():
-                array_temp.append(element)
-            array_list.append(array_temp)
+            if line != '':
+                for element in line.split():
+                    array_temp.append(element)
+                array_list.append(array_temp)
         
         #Seleção dos metódos
         hit_or_miss(array_list)
