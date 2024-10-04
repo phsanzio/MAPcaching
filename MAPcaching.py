@@ -1,3 +1,30 @@
+import math
+
+def hit_or_miss(array_list):
+    tamanho_ram = int(array_list[0][0])
+    n_palavras = int(array_list[1][0])
+    tamanho_bloco = int(array_list[1][0]) * 4
+    n_linhas = int(array_list[2][0])
+    n_vias = int(array_list[3][0])
+    list_end = array_list[4]
+    list_cache = []
+    miss = 0
+    hit = 0
+    #print(end)
+    n_bits_end = int(math.log2(tamanho_bloco))
+    print(n_bits_end)
+    for end in list_end:
+        n_bloco = int(end) // tamanho_bloco
+        if n_bloco not in list_cache:
+            list_cache.append(n_bloco)
+            miss += 1
+        else:
+            hit += 1
+    #print(list_cache)
+    print(miss)
+    print(hit)
+    
+
 def text_generator(read_file, write_file):
     with open(read_file, 'r') as read_file, open(write_file, 'w') as write_file:
         write_file.write('Nome: ' + username + '\n')
@@ -13,11 +40,12 @@ def text_generator(read_file, write_file):
             array_list.append(array_temp)
         
         #Seleção dos metódos
-            
-        #Colocar instruções no txt de resultado
-        
-            line_printable = "".join(line)
-            write_file.write(line_printable + '\n')
+        hit_or_miss(array_list)
+    #Colocar instruções no txt de resultado
+        #print(array_list)
+        # for line in array_list:
+        #     line_printable = " ".join(line)
+        #     write_file.write(line_printable + '\n')
 
 
 #Mude a quantidade de arquivos
