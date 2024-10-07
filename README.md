@@ -18,11 +18,11 @@ O MAPcaching é um programa para que tem o objetivo de simular de maneira simpli
 
 - <strong>Passo 1:</strong> Crie um arquivo com esse padrão de nome (***TESTE-01.txt***) podendo ir de 01 até o número de arquivos definidos em ***n_arquivos***
 - <strong>Passo 2:</strong> Insira as seguintes informações: 
-  - 1º linha: Tamanho da memória principal em bytes
-  - 2º linha: Número de palavras por bloco
-  - 3º linha: Total de linhas na cache
-  - 4º linha: Número de vias do conjunto
-  - 5º linha: Sequência de endereços de memória acessados
+  - <strong>1º linha:</strong> Tamanho da memória principal em bytes
+  - <strong>2º linha:</strong> Número de palavras por bloco
+  - <strong>3º linha:</strong> Total de linhas na cache
+  - <strong>4º linha:</strong> Número de vias do conjunto
+  - <strong>5º linha:</strong> Sequência de endereços de memória acessados
 - <strong>Exemplo:</strong>
 ```asm
 32768
